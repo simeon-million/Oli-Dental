@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Palette ──────────────────────────────── */
+  --color-background: #ECEFF1;   /* White 1  – page bg        */
+  --color-foreground: #121313;   /* Black    – body text       */
+  --color-primary:   #0F172A;   /* Navy     – headings/nav    */
+  --color-accent:    #F1D900;   /* Gold     – CTA / highlights*/
+  --color-secondary: #F4F7F6;   /* White 2  – section alt bg  */
+
+  /* ── Typography ─────────────────────────────────── */
+  --font-sans:  var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+/* ── Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* ── Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-secondary); }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+
+/* ── Selection ──────────────────────────────────────── */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
